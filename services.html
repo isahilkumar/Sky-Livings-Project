@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Sky Livings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css">
+
+    <!-- Box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <!-- logo -->
+        <a href="" class="logo"><img src="img/Sky Livings Logo.png" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <!-- Nav-list -->
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+
+        <!-- whatsapp btn-->
+        <div class="header-btn">
+            <a href="https://wa.me/917566522341" target="_blank" title="Chat on WhatsApp">
+                <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"
+                    style="height: 40px;" />
+            </a>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+        <div class="hero-section">
+            <div class="hero-text">
+              <span>A HOME</span>
+              <span>AWAY FROM</span>
+              <span>HOME</span>
+            </div>
+          </div>
+
+    <!-- Booking Steps Section -->
+    <section class="booking-steps">
+        <h2>How to Book Your PG</h2>
+        <div class="steps-container">
+            <div class="step-box">
+                <i class='bx bx-search-alt'></i>
+                <h3>Search</h3>
+                <p>Browse through our wide range of PG options</p>
+            </div>
+            <div class="step-box">
+                <i class='bx bx-calendar-check'></i>
+                <h3>Schedule Visit</h3>
+                <p>Book a visit to see the PG in person</p>
+            </div>
+            <div class="step-box">
+                <i class='bx bx-check-circle'></i>
+                <h3>Confirm Booking</h3>
+                <p>Complete the booking process and move in</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PG Listings Section -->
+    <section class="pg-listings">
+        <h2>Available PGs</h2>
+        <div class="pg-container">
+            <!-- PG Box 1 -->
+            <div class="pg-box" id="pg-box-pg1" onclick="showPgDetails('pg1')">
+                <div class="pg-image">
+                    <button class="nav-btn prev-btn" onclick="event.stopPropagation(); changeCardImage('pg1', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <img class="slide-image" src="img/pg 1.webp" alt="PG Image">
+                    <button class="nav-btn next-btn" onclick="event.stopPropagation(); changeCardImage('pg1', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                    <span class="rating"><i class='bx bxs-star'></i> 3.6</span>
+                    <div class="gold-tag">Gold</div>
+                </div>
+                <div class="pg-info">
+                    <h3>Colive 1174 Horwich</h3>
+                    <p class="location"><i class='bx bxs-map'></i> PG in Mahadevpura, Bangalore</p>
+                    <p class="price">₹12,500 <span>Onwards</span></p>
+                </div>
+                <div class="pg-buttons">
+                    <button class="schedule-btn">Schedule Visit</button>
+                    <button class="enquire-btn">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- PG Details Modal 1 -->
+            <div id="pgDetailsModal-pg1" class="modal">
+                <div class="modal-content details-modal">
+                    <span class="close">&times;</span>
+                    <div class="pg-details-container">
+                        <div class="pg-details-image">
+                            <div class="main-image">
+                                <img id="modalPgImage-pg1" src="img/pg 1.webp" alt="PG Image">
+                                <span class="modal-rating"><i class='bx bxs-star'></i> 3.6</span>
+                            </div>
+                            <div class="image-thumbnails">
+                                <img src="img/pg 1.webp" alt="PG Image 1" onclick="changeMainImage('pg1', this.src)">
+                                <img src="img/pg 2.webp" alt="PG Image 2" onclick="changeMainImage('pg1', this.src)">
+                                <img src="img/pg 3.webp" alt="PG Image 3" onclick="changeMainImage('pg1', this.src)">
+                                <img src="img/pg 4.webp" alt="PG Image 4" onclick="changeMainImage('pg1', this.src)">
+                            </div>
+                        </div>
+                        <div class="pg-details-info">
+                            <h2>Colive 1174 Horwich</h2>
+                            <p class="modal-location"><i class='bx bxs-map'></i> PG in Mahadevpura, Bangalore</p>
+                            <p class="modal-price">₹12,500 <span>Onwards</span></p>
+                            <p class="modal-address"># 301, 4th Main Road, 3rd Cross Indiranagar, Kasturi Nagar, Bengaluru, Karnataka 560016, Bangalore</p>
+                            
+                            <div class="amenities">
+                                <h3>Amenities</h3>
+                                
+                                <!-- Style Section -->
+                                <div class="amenities-section style-section">
+                                    <h4><i class='bx bxs-crown'></i> Style</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-drawer'></i> Bedside Table</span>
+                                        <span><i class='bx bxs-cabinet'></i> Cupboard</span>
+                                        <span><i class='bx bxs-curtains'></i> Curtains</span>
+                                        <span><i class='bx bxs-trash'></i> Waste Management</span>
+                                        <span><i class='bx bxs-blanket'></i> Premium Bedding</span>
+                                        <span><i class='bx bxs-image'></i> Photo Frame</span>
+                                        <span><i class='bx bxs-chair'></i> Study Table & Chair</span>
+                                        <span><i class='bx bxs-cool'></i> AC</span>
+                                        <span><i class='bx bxs-sun'></i> Well-lit and Ventilated</span>
+                                        <span><i class='bx bxs-fridge'></i> Common Refrigerator</span>
+                                        <span><i class='bx bxs-tv'></i> TV</span>
+                                        <span><i class='bx bxs-grid'></i> Shoe Rack</span>
+                                    </div>
+                                </div>
+
+                                <!-- Safety Section -->
+                                <div class="amenities-section safety-section">
+                                    <h4><i class='bx bxs-shield-alt-2'></i> Safety</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-camera'></i> CCTV</span>
+                                        <span><i class='bx bxs-key'></i> Access Control</span>
+                                        <span><i class='bx bxs-phone-call'></i> SOS/ Emergency Response</span>
+                                    </div>
+                                </div>
+
+                                <!-- Savings Section -->
+                                <div class="amenities-section savings-section">
+                                    <h4><i class='bx bxs-wallet'></i> Savings</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-badge-dollar'></i> No Brokerage</span>
+                                        <span><i class='bx bxs-lock-open-alt'></i> Flexi-Lock-in</span>
+                                        <span><i class='bx bxs-bank'></i> 1 Month Deposit</span>
+                                    </div>
+                                </div>
+
+                                <!-- Smart Section -->
+                                <div class="amenities-section smart-section">
+                                    <h4><i class='bx bxs-bulb'></i> Smart</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-wifi'></i> High Speed WiFi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-buttons">
+                                <button class="schedule-btn" onclick="openBookingModal('Colive 1174 Horwich')">Schedule Visit</button>
+                                <button class="enquire-btn" onclick="openEnquiryModal('Colive 1174 Horwich')">Enquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PG Box 2 -->
+            <div class="pg-box" id="pg-box-pg2" onclick="showPgDetails('pg2')">
+                <div class="pg-image">
+                    <button class="nav-btn prev-btn" onclick="event.stopPropagation(); changeCardImage('pg2', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <img class="slide-image" src="img/pg 1.webp" alt="PG Image">
+                    <button class="nav-btn next-btn" onclick="event.stopPropagation(); changeCardImage('pg2', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                    <span class="rating"><i class='bx bxs-star'></i> 3.8</span>
+                </div>
+                <div class="pg-info">
+                    <h3>Colive 1151 High Field</h3>
+                    <p class="location"><i class='bx bxs-map'></i> PG in Mahadevapura, Bangalore</p>
+                    <p class="price">₹25,000 <span>Onwards</span></p>
+                </div>
+                <div class="pg-buttons">
+                    <button class="schedule-btn">Schedule Visit</button>
+                    <button class="enquire-btn">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- PG Details Modal 2 -->
+            <div id="pgDetailsModal-pg2" class="modal">
+                <div class="modal-content details-modal">
+                    <span class="close">&times;</span>
+                    <div class="pg-details-container">
+                        <div class="pg-details-image">
+                            <div class="main-image">
+                                <img id="modalPgImage-pg2" src="img/pg 1.webp" alt="PG Image">
+                                <span class="modal-rating"><i class='bx bxs-star'></i> 3.8</span>
+                            </div>
+                            <div class="image-thumbnails">
+                                <img src="img/pg 1.webp" alt="PG Image 1" onclick="changeMainImage('pg2', this.src)">
+                                <img src="img/pg 2.webp" alt="PG Image 2" onclick="changeMainImage('pg2', this.src)">
+                                <img src="img/pg 3.webp" alt="PG Image 3" onclick="changeMainImage('pg2', this.src)">
+                                <img src="img/pg 4.webp" alt="PG Image 4" onclick="changeMainImage('pg2', this.src)">
+                            </div>
+                        </div>
+                        <div class="pg-details-info">
+                            <h2>Colive 1151 High Field</h2>
+                            <p class="modal-location"><i class='bx bxs-map'></i> PG in Mahadevapura, Bangalore</p>
+                            <p class="modal-price">₹25,000 <span>Onwards</span></p>
+                            <p class="modal-address"># 405, 5th Main Road, 2nd Cross Mahadevapura, Bangalore</p>
+                            
+                            <div class="amenities">
+                                <h3>Amenities</h3>
+                                
+                                <!-- Style Section -->
+                                <div class="amenities-section style-section">
+                                    <h4><i class='bx bxs-crown'></i> Style</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-drawer'></i> Bedside Table</span>
+                                        <span><i class='bx bxs-cabinet'></i> Cupboard</span>
+                                        <span><i class='bx bxs-curtains'></i> Curtains</span>
+                                        <span><i class='bx bxs-trash'></i> Waste Management</span>
+                                        <span><i class='bx bxs-blanket'></i> Premium Bedding</span>
+                                        <span><i class='bx bxs-image'></i> Photo Frame</span>
+                                        <span><i class='bx bxs-chair'></i> Study Table & Chair</span>
+                                        <span><i class='bx bxs-cool'></i> AC</span>
+                                        <span><i class='bx bxs-sun'></i> Well-lit and Ventilated</span>
+                                        <span><i class='bx bxs-fridge'></i> Common Refrigerator</span>
+                                        <span><i class='bx bxs-tv'></i> TV</span>
+                                        <span><i class='bx bxs-grid'></i> Shoe Rack</span>
+                                    </div>
+                                </div>
+
+                                <!-- Safety Section -->
+                                <div class="amenities-section safety-section">
+                                    <h4><i class='bx bxs-shield-alt-2'></i> Safety</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-camera'></i> CCTV</span>
+                                        <span><i class='bx bxs-key'></i> Access Control</span>
+                                        <span><i class='bx bxs-phone-call'></i> SOS/ Emergency Response</span>
+                                    </div>
+                                </div>
+
+                                <!-- Savings Section -->
+                                <div class="amenities-section savings-section">
+                                    <h4><i class='bx bxs-wallet'></i> Savings</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-badge-dollar'></i> No Brokerage</span>
+                                        <span><i class='bx bxs-lock-open-alt'></i> Flexi-Lock-in</span>
+                                        <span><i class='bx bxs-bank'></i> 1 Month Deposit</span>
+                                    </div>
+                                </div>
+
+                                <!-- Smart Section -->
+                                <div class="amenities-section smart-section">
+                                    <h4><i class='bx bxs-bulb'></i> Smart</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-wifi'></i> High Speed WiFi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-buttons">
+                                <button class="schedule-btn" onclick="openBookingModal('Colive 1151 High Field')">Schedule Visit</button>
+                                <button class="enquire-btn" onclick="openEnquiryModal('Colive 1151 High Field')">Enquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PG Box 3 -->
+            <div class="pg-box" id="pg-box-pg3" onclick="showPgDetails('pg3')">
+                <div class="pg-image">
+                    <button class="nav-btn prev-btn" onclick="event.stopPropagation(); changeCardImage('pg3', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <img class="slide-image" src="img/pg 1.webp" alt="PG Image">
+                    <button class="nav-btn next-btn" onclick="event.stopPropagation(); changeCardImage('pg3', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                    <span class="rating"><i class='bx bxs-star'></i> 3.6</span>
+                </div>
+                <div class="pg-info">
+                    <h3>Colive 1179 Fallon</h3>
+                    <p class="location"><i class='bx bxs-map'></i> PG in Mahadevpura, Bangalore</p>
+                    <p class="price">₹20,000 <span>Onwards</span></p>
+                </div>
+                <div class="pg-buttons">
+                    <button class="schedule-btn">Schedule Visit</button>
+                    <button class="enquire-btn">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- PG Details Modal 3 -->
+            <div id="pgDetailsModal-pg3" class="modal">
+                <div class="modal-content details-modal">
+                    <span class="close">&times;</span>
+                    <div class="pg-details-container">
+                        <div class="pg-details-image">
+                            <div class="main-image">
+                                <img id="modalPgImage-pg3" src="img/pg 1.webp" alt="PG Image">
+                                <span class="modal-rating"><i class='bx bxs-star'></i> 3.6</span>
+                            </div>
+                            <div class="image-thumbnails">
+                                <img src="img/pg 1.webp" alt="PG Image 1" onclick="changeMainImage('pg3', this.src)">
+                                <img src="img/pg 2.webp" alt="PG Image 2" onclick="changeMainImage('pg3', this.src)">
+                                <img src="img/pg 3.webp" alt="PG Image 3" onclick="changeMainImage('pg3', this.src)">
+                                <img src="img/pg 4.webp" alt="PG Image 4" onclick="changeMainImage('pg3', this.src)">
+                            </div>
+                        </div>
+                        <div class="pg-details-info">
+                            <h2>Colive 1179 Fallon</h2>
+                            <p class="modal-location"><i class='bx bxs-map'></i> PG in Mahadevpura, Bangalore</p>
+                            <p class="modal-price">₹20,000 <span>Onwards</span></p>
+                            <p class="modal-address"># 502, 6th Main Road, 4th Cross Mahadevpura, Bangalore</p>
+                            
+                            <div class="amenities">
+                                <h3>Amenities</h3>
+                                
+                                <!-- Style Section -->
+                                <div class="amenities-section style-section">
+                                    <h4><i class='bx bxs-crown'></i> Style</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-drawer'></i> Bedside Table</span>
+                                        <span><i class='bx bxs-cabinet'></i> Cupboard</span>
+                                        <span><i class='bx bxs-curtains'></i> Curtains</span>
+                                        <span><i class='bx bxs-trash'></i> Waste Management</span>
+                                        <span><i class='bx bxs-blanket'></i> Premium Bedding</span>
+                                        <span><i class='bx bxs-image'></i> Photo Frame</span>
+                                        <span><i class='bx bxs-chair'></i> Study Table & Chair</span>
+                                        <span><i class='bx bxs-cool'></i> AC</span>
+                                        <span><i class='bx bxs-sun'></i> Well-lit and Ventilated</span>
+                                        <span><i class='bx bxs-fridge'></i> Common Refrigerator</span>
+                                        <span><i class='bx bxs-tv'></i> TV</span>
+                                        <span><i class='bx bxs-grid'></i> Shoe Rack</span>
+                                    </div>
+                                </div>
+
+                                <!-- Safety Section -->
+                                <div class="amenities-section safety-section">
+                                    <h4><i class='bx bxs-shield-alt-2'></i> Safety</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-camera'></i> CCTV</span>
+                                        <span><i class='bx bxs-key'></i> Access Control</span>
+                                        <span><i class='bx bxs-phone-call'></i> SOS/ Emergency Response</span>
+                                    </div>
+                                </div>
+
+                                <!-- Savings Section -->
+                                <div class="amenities-section savings-section">
+                                    <h4><i class='bx bxs-wallet'></i> Savings</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-badge-dollar'></i> No Brokerage</span>
+                                        <span><i class='bx bxs-lock-open-alt'></i> Flexi-Lock-in</span>
+                                        <span><i class='bx bxs-bank'></i> 1 Month Deposit</span>
+                                    </div>
+                                </div>
+
+                                <!-- Smart Section -->
+                                <div class="amenities-section smart-section">
+                                    <h4><i class='bx bxs-bulb'></i> Smart</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-wifi'></i> High Speed WiFi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-buttons">
+                                <button class="schedule-btn" onclick="openBookingModal('Colive 1179 Fallon')">Schedule Visit</button>
+                                <button class="enquire-btn" onclick="openEnquiryModal('Colive 1179 Fallon')">Enquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PG Box 4 -->
+            <div class="pg-box" id="pg-box-pg4" onclick="showPgDetails('pg4')">
+                <div class="pg-image">
+                    <button class="nav-btn prev-btn" onclick="event.stopPropagation(); changeCardImage('pg4', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <img class="slide-image" src="img/pg 1.webp" alt="PG Image">
+                    <button class="nav-btn next-btn" onclick="event.stopPropagation(); changeCardImage('pg4', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                    <span class="rating"><i class='bx bxs-star'></i> 4.4</span>
+                </div>
+                <div class="pg-info">
+                    <h3>Colive 1890 Lotus</h3>
+                    <p class="location"><i class='bx bxs-map'></i> PG in Koramangala, Bangalore</p>
+                    <p class="price">₹17,200 <span>Onwards</span></p>
+                </div>
+                <div class="pg-buttons">
+                    <button class="schedule-btn">Schedule Visit</button>
+                    <button class="enquire-btn">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- PG Details Modal 4 -->
+            <div id="pgDetailsModal-pg4" class="modal">
+                <div class="modal-content details-modal">
+                    <span class="close">&times;</span>
+                    <div class="pg-details-container">
+                        <div class="pg-details-image">
+                            <div class="main-image">
+                                <img id="modalPgImage-pg4" src="img/pg 1.webp" alt="PG Image">
+                                <span class="modal-rating"><i class='bx bxs-star'></i> 4.4</span>
+                            </div>
+                            <div class="image-thumbnails">
+                                <img src="img/pg 1.webp" alt="PG Image 1" onclick="changeMainImage('pg4', this.src)">
+                                <img src="img/pg 2.webp" alt="PG Image 2" onclick="changeMainImage('pg4', this.src)">
+                                <img src="img/pg 3.webp" alt="PG Image 3" onclick="changeMainImage('pg4', this.src)">
+                                <img src="img/pg 4.webp" alt="PG Image 4" onclick="changeMainImage('pg4', this.src)">
+                            </div>
+                        </div>
+                        <div class="pg-details-info">
+                            <h2>Colive 1890 Lotus</h2>
+                            <p class="modal-location"><i class='bx bxs-map'></i> PG in Koramangala, Bangalore</p>
+                            <p class="modal-price">₹17,200 <span>Onwards</span></p>
+                            <p class="modal-address"># 890, 5th Block, Koramangala, Bangalore</p>
+                            
+                            <div class="amenities">
+                                <h3>Amenities</h3>
+                                
+                                <!-- Style Section -->
+                                <div class="amenities-section style-section">
+                                    <h4><i class='bx bxs-crown'></i> Style</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-drawer'></i> Bedside Table</span>
+                                        <span><i class='bx bxs-cabinet'></i> Cupboard</span>
+                                        <span><i class='bx bxs-curtains'></i> Curtains</span>
+                                        <span><i class='bx bxs-trash'></i> Waste Management</span>
+                                        <span><i class='bx bxs-blanket'></i> Premium Bedding</span>
+                                        <span><i class='bx bxs-image'></i> Photo Frame</span>
+                                        <span><i class='bx bxs-chair'></i> Study Table & Chair</span>
+                                        <span><i class='bx bxs-cool'></i> AC</span>
+                                        <span><i class='bx bxs-sun'></i> Well-lit and Ventilated</span>
+                                        <span><i class='bx bxs-fridge'></i> Common Refrigerator</span>
+                                        <span><i class='bx bxs-tv'></i> TV</span>
+                                        <span><i class='bx bxs-grid'></i> Shoe Rack</span>
+                                    </div>
+                                </div>
+
+                                <!-- Safety Section -->
+                                <div class="amenities-section safety-section">
+                                    <h4><i class='bx bxs-shield-alt-2'></i> Safety</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-camera'></i> CCTV</span>
+                                        <span><i class='bx bxs-key'></i> Access Control</span>
+                                        <span><i class='bx bxs-phone-call'></i> SOS/ Emergency Response</span>
+                                    </div>
+                                </div>
+
+                                <!-- Savings Section -->
+                                <div class="amenities-section savings-section">
+                                    <h4><i class='bx bxs-wallet'></i> Savings</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-badge-dollar'></i> No Brokerage</span>
+                                        <span><i class='bx bxs-lock-open-alt'></i> Flexi-Lock-in</span>
+                                        <span><i class='bx bxs-bank'></i> 1 Month Deposit</span>
+                                    </div>
+                                </div>
+
+                                <!-- Smart Section -->
+                                <div class="amenities-section smart-section">
+                                    <h4><i class='bx bxs-bulb'></i> Smart</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-wifi'></i> High Speed WiFi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-buttons">
+                                <button class="schedule-btn" onclick="openBookingModal('Colive 1890 Lotus')">Schedule Visit</button>
+                                <button class="enquire-btn" onclick="openEnquiryModal('Colive 1890 Lotus')">Enquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PG Box 5 -->
+            <div class="pg-box" id="pg-box-pg5" onclick="showPgDetails('pg5')">
+                <div class="pg-image">
+                    <button class="nav-btn prev-btn" onclick="event.stopPropagation(); changeCardImage('pg5', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <img class="slide-image" src="img/pg 1.webp" alt="PG Image">
+                    <button class="nav-btn next-btn" onclick="event.stopPropagation(); changeCardImage('pg5', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                    <span class="rating"><i class='bx bxs-star'></i> 4.5</span>
+                </div>
+                <div class="pg-info">
+                    <h3>Colive 2345 Iris</h3>
+                    <p class="location"><i class='bx bxs-map'></i> PG in Indiranagar, Bangalore</p>
+                    <p class="price">₹18,500 <span>Onwards</span></p>
+                </div>
+                <div class="pg-buttons">
+                    <button class="schedule-btn">Schedule Visit</button>
+                    <button class="enquire-btn">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- PG Details Modal 5 -->
+            <div id="pgDetailsModal-pg5" class="modal">
+                <div class="modal-content details-modal">
+                    <span class="close">&times;</span>
+                    <div class="pg-details-container">
+                        <div class="pg-details-image">
+                            <div class="main-image">
+                                <img id="modalPgImage-pg5" src="img/pg 1.webp" alt="PG Image">
+                                <span class="modal-rating"><i class='bx bxs-star'></i> 4.5</span>
+                            </div>
+                            <div class="image-thumbnails">
+                                <img src="img/pg 1.webp" alt="PG Image 1" onclick="changeMainImage('pg5', this.src)">
+                                <img src="img/pg 2.webp" alt="PG Image 2" onclick="changeMainImage('pg5', this.src)">
+                                <img src="img/pg 3.webp" alt="PG Image 3" onclick="changeMainImage('pg5', this.src)">
+                                <img src="img/pg 4.webp" alt="PG Image 4" onclick="changeMainImage('pg5', this.src)">
+                            </div>
+                        </div>
+                        <div class="pg-details-info">
+                            <h2>Colive 2345 Iris</h2>
+                            <p class="modal-location"><i class='bx bxs-map'></i> PG in Indiranagar, Bangalore</p>
+                            <p class="modal-price">₹18,500 <span>Onwards</span></p>
+                            <p class="modal-address"># 345, 12th Main, Indiranagar, Bangalore</p>
+                            
+                            <div class="amenities">
+                                <h3>Amenities</h3>
+                                
+                                <!-- Style Section -->
+                                <div class="amenities-section style-section">
+                                    <h4><i class='bx bxs-crown'></i> Style</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-drawer'></i> Bedside Table</span>
+                                        <span><i class='bx bxs-cabinet'></i> Cupboard</span>
+                                        <span><i class='bx bxs-curtains'></i> Curtains</span>
+                                        <span><i class='bx bxs-trash'></i> Waste Management</span>
+                                        <span><i class='bx bxs-blanket'></i> Premium Bedding</span>
+                                        <span><i class='bx bxs-image'></i> Photo Frame</span>
+                                        <span><i class='bx bxs-chair'></i> Study Table & Chair</span>
+                                        <span><i class='bx bxs-cool'></i> AC</span>
+                                        <span><i class='bx bxs-sun'></i> Well-lit and Ventilated</span>
+                                        <span><i class='bx bxs-fridge'></i> Common Refrigerator</span>
+                                        <span><i class='bx bxs-tv'></i> TV</span>
+                                        <span><i class='bx bxs-grid'></i> Shoe Rack</span>
+                                    </div>
+                                </div>
+
+                                <!-- Safety Section -->
+                                <div class="amenities-section safety-section">
+                                    <h4><i class='bx bxs-shield-alt-2'></i> Safety</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-camera'></i> CCTV</span>
+                                        <span><i class='bx bxs-key'></i> Access Control</span>
+                                        <span><i class='bx bxs-phone-call'></i> SOS/ Emergency Response</span>
+                                    </div>
+                                </div>
+
+                                <!-- Savings Section -->
+                                <div class="amenities-section savings-section">
+                                    <h4><i class='bx bxs-wallet'></i> Savings</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-badge-dollar'></i> No Brokerage</span>
+                                        <span><i class='bx bxs-lock-open-alt'></i> Flexi-Lock-in</span>
+                                        <span><i class='bx bxs-bank'></i> 1 Month Deposit</span>
+                                    </div>
+                                </div>
+
+                                <!-- Smart Section -->
+                                <div class="amenities-section smart-section">
+                                    <h4><i class='bx bxs-bulb'></i> Smart</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-wifi'></i> High Speed WiFi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-buttons">
+                                <button class="schedule-btn" onclick="openBookingModal('Colive 2345 Iris')">Schedule Visit</button>
+                                <button class="enquire-btn" onclick="openEnquiryModal('Colive 2345 Iris')">Enquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PG Box 6 -->
+            <div class="pg-box" id="pg-box-pg6" onclick="showPgDetails('pg6')">
+                <div class="pg-image">
+                    <button class="nav-btn prev-btn" onclick="event.stopPropagation(); changeCardImage('pg6', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <img class="slide-image" src="img/pg 1.webp" alt="PG Image">
+                    <button class="nav-btn next-btn" onclick="event.stopPropagation(); changeCardImage('pg6', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                    <span class="rating"><i class='bx bxs-star'></i> 4.2</span>
+                </div>
+                <div class="pg-info">
+                    <h3>Colive 2678 Jasmine</h3>
+                    <p class="location"><i class='bx bxs-map'></i> PG in JP Nagar, Bangalore</p>
+                    <p class="price">₹16,900 <span>Onwards</span></p>
+                </div>
+                <div class="pg-buttons">
+                    <button class="schedule-btn">Schedule Visit</button>
+                    <button class="enquire-btn">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- PG Details Modal 6 -->
+            <div id="pgDetailsModal-pg6" class="modal">
+                <div class="modal-content details-modal">
+                    <span class="close">&times;</span>
+                    <div class="pg-details-container">
+                        <div class="pg-details-image">
+                            <div class="main-image">
+                                <img id="modalPgImage-pg6" src="img/pg 1.webp" alt="PG Image">
+                                <span class="modal-rating"><i class='bx bxs-star'></i> 4.2</span>
+                            </div>
+                            <div class="image-thumbnails">
+                                <img src="img/pg 1.webp" alt="PG Image 1" onclick="changeMainImage('pg6', this.src)">
+                                <img src="img/pg 2.webp" alt="PG Image 2" onclick="changeMainImage('pg6', this.src)">
+                                <img src="img/pg 3.webp" alt="PG Image 3" onclick="changeMainImage('pg6', this.src)">
+                                <img src="img/pg 4.webp" alt="PG Image 4" onclick="changeMainImage('pg6', this.src)">
+                            </div>
+                        </div>
+                        <div class="pg-details-info">
+                            <h2>Colive 2678 Jasmine</h2>
+                            <p class="modal-location"><i class='bx bxs-map'></i> PG in JP Nagar, Bangalore</p>
+                            <p class="modal-price">₹16,900 <span>Onwards</span></p>
+                            <p class="modal-address"># 678, 15th Cross, JP Nagar, Bangalore</p>
+                            
+                            <div class="amenities">
+                                <h3>Amenities</h3>
+                                
+                                <!-- Style Section -->
+                                <div class="amenities-section style-section">
+                                    <h4><i class='bx bxs-crown'></i> Style</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-drawer'></i> Bedside Table</span>
+                                        <span><i class='bx bxs-cabinet'></i> Cupboard</span>
+                                        <span><i class='bx bxs-curtains'></i> Curtains</span>
+                                        <span><i class='bx bxs-trash'></i> Waste Management</span>
+                                        <span><i class='bx bxs-blanket'></i> Premium Bedding</span>
+                                        <span><i class='bx bxs-image'></i> Photo Frame</span>
+                                        <span><i class='bx bxs-chair'></i> Study Table & Chair</span>
+                                        <span><i class='bx bxs-cool'></i> AC</span>
+                                        <span><i class='bx bxs-sun'></i> Well-lit and Ventilated</span>
+                                        <span><i class='bx bxs-fridge'></i> Common Refrigerator</span>
+                                        <span><i class='bx bxs-tv'></i> TV</span>
+                                        <span><i class='bx bxs-grid'></i> Shoe Rack</span>
+                                    </div>
+                                </div>
+
+                                <!-- Safety Section -->
+                                <div class="amenities-section safety-section">
+                                    <h4><i class='bx bxs-shield-alt-2'></i> Safety</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-camera'></i> CCTV</span>
+                                        <span><i class='bx bxs-key'></i> Access Control</span>
+                                        <span><i class='bx bxs-phone-call'></i> SOS/ Emergency Response</span>
+                                    </div>
+                                </div>
+
+                                <!-- Savings Section -->
+                                <div class="amenities-section savings-section">
+                                    <h4><i class='bx bxs-wallet'></i> Savings</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-badge-dollar'></i> No Brokerage</span>
+                                        <span><i class='bx bxs-lock-open-alt'></i> Flexi-Lock-in</span>
+                                        <span><i class='bx bxs-bank'></i> 1 Month Deposit</span>
+                                    </div>
+                                </div>
+
+                                <!-- Smart Section -->
+                                <div class="amenities-section smart-section">
+                                    <h4><i class='bx bxs-bulb'></i> Smart</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-wifi'></i> High Speed WiFi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-buttons">
+                                <button class="schedule-btn" onclick="openBookingModal('Colive 2678 Jasmine')">Schedule Visit</button>
+                                <button class="enquire-btn" onclick="openEnquiryModal('Colive 2678 Jasmine')">Enquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PG Box 7 -->
+            <div class="pg-box" id="pg-box-pg7" onclick="showPgDetails('pg7')">
+                <div class="pg-image">
+                    <button class="nav-btn prev-btn" onclick="event.stopPropagation(); changeCardImage('pg7', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <img class="slide-image" src="img/pg 1.webp" alt="PG Image">
+                    <button class="nav-btn next-btn" onclick="event.stopPropagation(); changeCardImage('pg7', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                    <span class="rating"><i class='bx bxs-star'></i> 4.6</span>
+                </div>
+                <div class="pg-info">
+                    <h3>Colive 3012 Tulip</h3>
+                    <p class="location"><i class='bx bxs-map'></i> PG in Electronic City, Bangalore</p>
+                    <p class="price">₹14,800 <span>Onwards</span></p>
+                </div>
+                <div class="pg-buttons">
+                    <button class="schedule-btn">Schedule Visit</button>
+                    <button class="enquire-btn">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- PG Details Modal 7 -->
+            <div id="pgDetailsModal-pg7" class="modal">
+                <div class="modal-content details-modal">
+                    <span class="close">&times;</span>
+                    <div class="pg-details-container">
+                        <div class="pg-details-image">
+                            <div class="main-image">
+                                <img id="modalPgImage-pg7" src="img/pg 1.webp" alt="PG Image">
+                                <span class="modal-rating"><i class='bx bxs-star'></i> 4.6</span>
+                            </div>
+                            <div class="image-thumbnails">
+                                <img src="img/pg 1.webp" alt="PG Image 1" onclick="changeMainImage('pg7', this.src)">
+                                <img src="img/pg 2.webp" alt="PG Image 2" onclick="changeMainImage('pg7', this.src)">
+                                <img src="img/pg 3.webp" alt="PG Image 3" onclick="changeMainImage('pg7', this.src)">
+                                <img src="img/pg 4.webp" alt="PG Image 4" onclick="changeMainImage('pg7', this.src)">
+                            </div>
+                        </div>
+                        <div class="pg-details-info">
+                            <h2>Colive 3012 Tulip</h2>
+                            <p class="modal-location"><i class='bx bxs-map'></i> PG in Electronic City, Bangalore</p>
+                            <p class="modal-price">₹14,800 <span>Onwards</span></p>
+                            <p class="modal-address"># 012, Phase 1, Electronic City, Bangalore</p>
+                            
+                            <div class="amenities">
+                                <h3>Amenities</h3>
+                                
+                                <!-- Style Section -->
+                                <div class="amenities-section style-section">
+                                    <h4><i class='bx bxs-crown'></i> Style</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-drawer'></i> Bedside Table</span>
+                                        <span><i class='bx bxs-cabinet'></i> Cupboard</span>
+                                        <span><i class='bx bxs-curtains'></i> Curtains</span>
+                                        <span><i class='bx bxs-trash'></i> Waste Management</span>
+                                        <span><i class='bx bxs-blanket'></i> Premium Bedding</span>
+                                        <span><i class='bx bxs-image'></i> Photo Frame</span>
+                                        <span><i class='bx bxs-chair'></i> Study Table & Chair</span>
+                                        <span><i class='bx bxs-cool'></i> AC</span>
+                                        <span><i class='bx bxs-sun'></i> Well-lit and Ventilated</span>
+                                        <span><i class='bx bxs-fridge'></i> Common Refrigerator</span>
+                                        <span><i class='bx bxs-tv'></i> TV</span>
+                                        <span><i class='bx bxs-grid'></i> Shoe Rack</span>
+                                    </div>
+                                </div>
+
+                                <!-- Safety Section -->
+                                <div class="amenities-section safety-section">
+                                    <h4><i class='bx bxs-shield-alt-2'></i> Safety</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-camera'></i> CCTV</span>
+                                        <span><i class='bx bxs-key'></i> Access Control</span>
+                                        <span><i class='bx bxs-phone-call'></i> SOS/ Emergency Response</span>
+                                    </div>
+                                </div>
+
+                                <!-- Savings Section -->
+                                <div class="amenities-section savings-section">
+                                    <h4><i class='bx bxs-wallet'></i> Savings</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-badge-dollar'></i> No Brokerage</span>
+                                        <span><i class='bx bxs-lock-open-alt'></i> Flexi-Lock-in</span>
+                                        <span><i class='bx bxs-bank'></i> 1 Month Deposit</span>
+                                    </div>
+                                </div>
+
+                                <!-- Smart Section -->
+                                <div class="amenities-section smart-section">
+                                    <h4><i class='bx bxs-bulb'></i> Smart</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-wifi'></i> High Speed WiFi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-buttons">
+                                <button class="schedule-btn" onclick="openBookingModal('Colive 3012 Tulip')">Schedule Visit</button>
+                                <button class="enquire-btn" onclick="openEnquiryModal('Colive 3012 Tulip')">Enquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PG Box 8 -->
+            <div class="pg-box" id="pg-box-pg8" onclick="showPgDetails('pg8')">
+                <div class="pg-image">
+                    <button class="nav-btn prev-btn" onclick="event.stopPropagation(); changeCardImage('pg8', -1)">
+                        <i class='bx bx-chevron-left'></i>
+                    </button>
+                    <img class="slide-image" src="img/pg 1.webp" alt="PG Image">
+                    <button class="nav-btn next-btn" onclick="event.stopPropagation(); changeCardImage('pg8', 1)">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                    <span class="rating"><i class='bx bxs-star'></i> 4.3</span>
+                </div>
+                <div class="pg-info">
+                    <h3>Colive 3456 Daisy</h3>
+                    <p class="location"><i class='bx bxs-map'></i> PG in Marathahalli, Bangalore</p>
+                    <p class="price">₹15,900 <span>Onwards</span></p>
+                </div>
+                <div class="pg-buttons">
+                    <button class="schedule-btn">Schedule Visit</button>
+                    <button class="enquire-btn">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- PG Details Modal 8 -->
+            <div id="pgDetailsModal-pg8" class="modal">
+                <div class="modal-content details-modal">
+                    <span class="close">&times;</span>
+                    <div class="pg-details-container">
+                        <div class="pg-details-image">
+                            <div class="main-image">
+                                <img id="modalPgImage-pg8" src="img/pg 1.webp" alt="PG Image">
+                                <span class="modal-rating"><i class='bx bxs-star'></i> 4.3</span>
+                            </div>
+                            <div class="image-thumbnails">
+                                <img src="img/pg 1.webp" alt="PG Image 1" onclick="changeMainImage('pg8', this.src)">
+                                <img src="img/pg 2.webp" alt="PG Image 2" onclick="changeMainImage('pg8', this.src)">
+                                <img src="img/pg 3.webp" alt="PG Image 3" onclick="changeMainImage('pg8', this.src)">
+                                <img src="img/pg 4.webp" alt="PG Image 4" onclick="changeMainImage('pg8', this.src)">
+                            </div>
+                        </div>
+                        <div class="pg-details-info">
+                            <h2>Colive 3456 Daisy</h2>
+                            <p class="modal-location"><i class='bx bxs-map'></i> PG in Marathahalli, Bangalore</p>
+                            <p class="modal-price">₹15,900 <span>Onwards</span></p>
+                            <p class="modal-address"># 456, Outer Ring Road, Marathahalli, Bangalore</p>
+                            
+                            <div class="amenities">
+                                <h3>Amenities</h3>
+                                
+                                <!-- Style Section -->
+                                <div class="amenities-section style-section">
+                                    <h4><i class='bx bxs-crown'></i> Style</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-drawer'></i> Bedside Table</span>
+                                        <span><i class='bx bxs-cabinet'></i> Cupboard</span>
+                                        <span><i class='bx bxs-curtains'></i> Curtains</span>
+                                        <span><i class='bx bxs-trash'></i> Waste Management</span>
+                                        <span><i class='bx bxs-blanket'></i> Premium Bedding</span>
+                                        <span><i class='bx bxs-image'></i> Photo Frame</span>
+                                        <span><i class='bx bxs-chair'></i> Study Table & Chair</span>
+                                        <span><i class='bx bxs-cool'></i> AC</span>
+                                        <span><i class='bx bxs-sun'></i> Well-lit and Ventilated</span>
+                                        <span><i class='bx bxs-fridge'></i> Common Refrigerator</span>
+                                        <span><i class='bx bxs-tv'></i> TV</span>
+                                        <span><i class='bx bxs-grid'></i> Shoe Rack</span>
+                                    </div>
+                                </div>
+
+                                <!-- Safety Section -->
+                                <div class="amenities-section safety-section">
+                                    <h4><i class='bx bxs-shield-alt-2'></i> Safety</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-camera'></i> CCTV</span>
+                                        <span><i class='bx bxs-key'></i> Access Control</span>
+                                        <span><i class='bx bxs-phone-call'></i> SOS/ Emergency Response</span>
+                                    </div>
+                                </div>
+
+                                <!-- Savings Section -->
+                                <div class="amenities-section savings-section">
+                                    <h4><i class='bx bxs-wallet'></i> Savings</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-badge-dollar'></i> No Brokerage</span>
+                                        <span><i class='bx bxs-lock-open-alt'></i> Flexi-Lock-in</span>
+                                        <span><i class='bx bxs-bank'></i> 1 Month Deposit</span>
+                                    </div>
+                                </div>
+
+                                <!-- Smart Section -->
+                                <div class="amenities-section smart-section">
+                                    <h4><i class='bx bxs-bulb'></i> Smart</h4>
+                                    <div class="amenities-grid">
+                                        <span><i class='bx bxs-wifi'></i> High Speed WiFi</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-buttons">
+                                <button class="schedule-btn" onclick="openBookingModal('Colive 3456 Daisy')">Schedule Visit</button>
+                                <button class="enquire-btn" onclick="openEnquiryModal('Colive 3456 Daisy')">Enquire Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <a href="index.html" class="logo"><img src="img/Sky Livings Logo.png" alt="Sky Livings Logo"></a>
+                <div class="social">
+                    <a href="https://www.facebook.com/skylivingslpu/" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="https://twitter.com/skylivings" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/sky_livings/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://youtube.com/skylivings" target="_blank"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h2>Quick Links</h2>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-box">
+                <h2>Useful Links</h2>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="faq.html">FAQ</a>
+                <a href="support.html">Help & Support</a>
+            </div>
+            <div class="contact-detais">
+                <h2>Get In Touch</h2>
+                <div class="cnt">
+                    <i class='bx bxs-map'></i> &nbsp;Sky Livings,Law Gate Road<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phagwara, India
+                </div>
+                <div class="cnt">
+                    <i class='bx bxs-phone-call'></i> &nbsp; <a href="tel:+917566522341">+91 75665 22341</a>
+                </div>
+                <div class="cnt">
+                    <i class='bx bxs-envelope'></i> &nbsp; <a href="mailto:info@skylivings.com">info@skylivings.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <p>&#169; <a href="index.html" class="copyright-link">Sky Livings</a>. All Rights Reserved</p>
+        <p>Designed By- <a href="https://rohitchoudhary.com" target="_blank" class="copyright-link">Rohit Choudhary</a></p>
+    </div>
+
+    <!-- Floating Contact Bar -->
+    <div class="floating-contact-bar">
+        <div class="phone-icon">
+            <a href="tel:+917566522341">
+                <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call" width="24">
+            </a>
+        </div>
+
+        <a href="https://wa.me/917566522341" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            Whatsapp
+        </a>
+
+        <a href="contact.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/545/545705.png" alt="Enquire">
+            Enquire Now
+        </a>
+    </div>
+
+    <script src="nav.js"></script>
+    <script>
+        const sliderImages = {
+            pg1: ['img/pg 1.webp', 'img/pg 2.webp', 'img/pg 3.webp', 'img/pg 4.webp'],
+            pg2: ['img/pg 1.webp', 'img/pg 2.webp', 'img/pg 3.webp', 'img/pg 4.webp'],
+            pg3: ['img/pg 1.webp', 'img/pg 2.webp', 'img/pg 3.webp', 'img/pg 4.webp'],
+            pg4: ['img/pg 1.webp', 'img/pg 2.webp', 'img/pg 3.webp', 'img/pg 4.webp'],
+            pg5: ['img/pg 1.webp', 'img/pg 2.webp', 'img/pg 3.webp', 'img/pg 4.webp'],
+            pg6: ['img/pg 1.webp', 'img/pg 2.webp', 'img/pg 3.webp', 'img/pg 4.webp'],
+            pg7: ['img/pg 1.webp', 'img/pg 2.webp', 'img/pg 3.webp', 'img/pg 4.webp'],
+            pg8: ['img/pg 1.webp', 'img/pg 2.webp', 'img/pg 3.webp', 'img/pg 4.webp']
+        };
+
+        const currentImageIndex = {
+            pg1: 0, pg2: 0, pg3: 0, pg4: 0,
+            pg5: 0, pg6: 0, pg7: 0, pg8: 0
+        };
+
+        function changeCardImage(pgId, direction) {
+            const images = sliderImages[pgId];
+            currentImageIndex[pgId] = (currentImageIndex[pgId] + direction + images.length) % images.length;
+            const cardImage = document.querySelector(`#pg-box-${pgId} .slide-image`);
+            if (cardImage) {
+                cardImage.src = images[currentImageIndex[pgId]];
+            }
+        }
+
+        // Function to show PG details modal
+        function showPgDetails(pgNumber) {
+            const modal = document.getElementById(`pgDetailsModal-${pgNumber}`);
+            modal.style.display = "block";
+        }
+
+        // Function to change main image in modal
+        function changeMainImage(pgNumber, newSrc) {
+            const mainImage = document.getElementById(`modalPgImage-${pgNumber}`);
+            mainImage.src = newSrc;
+        }
+
+        // Close modal when clicking on 'x' button
+        document.querySelectorAll('.close').forEach(closeBtn => {
+            closeBtn.onclick = function() {
+                const modal = this.closest('.modal');
+                modal.style.display = "none";
+            }
+        });
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize modal close buttons
+            document.querySelectorAll('.close').forEach(closeBtn => {
+                closeBtn.onclick = function() {
+                    const modal = this.closest('.modal');
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+    <style>
+        /* Original PG Listing Styles */
+        .pg-listings {
+            padding: 50px 0;
+        }
+
+        .pg-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .pg-box {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pg-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .pg-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .pg-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rating {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .rating i {
+            color: #ffd700;
+            margin-right: 4px;
+        }
+
+        .gold-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: linear-gradient(45deg, #ffd700, #ffcc00);
+            color: #333;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .pg-info {
+            padding: 15px;
+        }
+
+        .pg-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .location {
+            color: #666;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #2563eb;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .price span {
+            font-size: 14px;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .pg-buttons {
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .pg-buttons button {
+            flex: 1;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .schedule-btn {
+            background: #2563eb;
+            color: white;
+        }
+
+        .schedule-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .enquire-btn {
+            background: white;
+            color: #2563eb;
+            border: 1px solid #2563eb;
+        }
+
+        .enquire-btn:hover {
+            background: #f0f7ff;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+
+        .nav-btn i {
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* Floating bar container */
+        .floating-contact-bar {
+            position: fixed;
+            bottom: 20px;
+            left: 10px;
+            right: 10px;
+            background-color: #330066;
+            border-radius: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+
+        .floating-contact-bar a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .floating-contact-bar img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .phone-icon {
+            background-color: white;
+            padding: 12px;
+            border-radius: 50%;
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 2px solid #330066;
+        }
+
+        @media (min-width: 768px) {
+            .floating-contact-bar {
+                display: none; /* Hide in desktop view */
+            }
+        }
+
+        /* PG Details Modal Styles */
+        .modal-content.details-modal {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: white;
+            margin: 40px auto;
+            padding: 20px;
+            width: 95%;
+            max-width: 1200px;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .close {
+            position: fixed;
+            top: 20px;
+            right: 40px;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .pg-details-container {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .pg-details-image {
+            flex: 1;
+            min-width: 400px;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 350px;
+            position: relative;
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .image-thumbnails {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .image-thumbnails img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-thumbnails img:hover {
+            opacity: 0.7;
+        }
+
+        .pg-details-info {
+            flex: 1.5;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .modal-rating {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .pg-details-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .modal-location,
+        .modal-price,
+        .modal-address {
+            color: #666;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-price {
+            font-size: 22px;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .amenities {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .amenities h3 {
+            margin-bottom: 20px;
+        }
+
+        .amenities-section {
+            margin-bottom: 20px;
+        }
+
+        .amenities-section h4 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #333;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .modal-buttons button {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .schedule-btn {
+            background: #0066ff;
+            color: white;
+        }
+
+        .schedule-btn:hover {
+            background: #0052cc;
+        }
+
+        .enquire-btn {
+            background: white;
+            color: #0066ff;
+            border: 1px solid #0066ff;
+        }
+
+        .enquire-btn:hover {
+            background: #f0f7ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .pg-details-container {
+                flex-direction: column;
+            }
+
+            .pg-details-image {
+                min-width: 100%;
+            }
+
+            .main-image {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .modal-content.details-modal {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .main-image {
+                height: 250px;
+            }
+
+            .amenities-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .modal form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .modal input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .modal button {
+            background: var(--gradient);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .modal button:hover {
+            background: var(--hover-gradient);
+        }
+    </style>
+
+    <!-- Add these modals at the end of the body, before the closing </body> tag -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Schedule a Visit</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+                </div>
+                <div class="form-group">
+                    <input type="date" name="visit_date" required min="<?php echo date('Y-m-d'); ?>">
+                </div>
+                <div class="form-group">
+                    <input type="time" name="visit_time" required>
+                </div>
+                <button type="submit" class="submit-btn">Schedule Visit</button>
+                <div id="booking-message" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <div id="enquiryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enquire Now</h2>
+            <form id="enquiryForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <input type="hidden" name="property" id="enquiryProperty">
+                <input type="hidden" name="form_type" value="enquiry">
+                <button type="submit">Submit Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        function openBookingModal(pgName) {
+            const modal = document.getElementById('bookingModal');
+            modal.style.display = 'block';
+        }
+
+        function openEnquiryModal(propertyName) {
+            const modal = document.getElementById('enquiryModal');
+            document.getElementById('enquiryProperty').value = propertyName;
+            modal.style.display = 'block';
+        }
+
+        // Add click handlers to all schedule and enquire buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add handlers for schedule buttons in PG boxes
+            document.querySelectorAll('.pg-box .schedule-btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent PG box click
+                    const pgBox = this.closest('.pg-box');
+                    const pgName = pgBox.querySelector('h3').textContent;
+                    openBookingModal(pgName);
+                });
+            });
+
+            // Add handlers for enquire buttons in PG boxes
+            document.querySelectorAll('.pg-box .enquire-btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent PG box click
+                    const pgBox = this.closest('.pg-box');
+                    const pgName = pgBox.querySelector('h3').textContent;
+                    openEnquiryModal(pgName);
+                });
+            });
+
+            // Close modals when clicking the X
+            document.querySelectorAll('.close').forEach(closeBtn => {
+                closeBtn.onclick = function() {
+                    this.closest('.modal').style.display = 'none';
+                }
+            });
+
+            // Close modals when clicking outside
+            window.onclick = function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                }
+            }
+        });
+
+        // Booking form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('.submit-btn');
+            const messageDiv = document.getElementById('booking-message');
+            
+            // Basic client-side validation
+            const phone = formData.get('phone');
+            if (!/^[0-9]{10}$/.test(phone)) {
+                messageDiv.textContent = 'Please enter a valid 10-digit phone number';
+                messageDiv.className = 'form-message error';
+                return;
+            }
+
+            const visitDate = new Date(formData.get('visit_date'));
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            if (visitDate < today) {
+                messageDiv.textContent = 'Please select a future date';
+                messageDiv.className = 'form-message error';
+                return;
+            }
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Scheduling...';
+            messageDiv.textContent = '';
+            messageDiv.className = 'form-message';
+            
+            fetch('user/api/process_form.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.status === 'success') {
+                    messageDiv.textContent = data.message;
+                    messageDiv.className = 'form-message success';
+                    form.reset();
+                    setTimeout(() => {
+                        document.getElementById('bookingModal').style.display = 'none';
+                    }, 2000);
+                } else {
+                    messageDiv.textContent = data.message || 'An error occurred. Please try again.';
+                    messageDiv.className = 'form-message error';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                messageDiv.textContent = 'An error occurred. Please try again.';
+                messageDiv.className = 'form-message error';
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Schedule Visit';
+            });
+        });
+
+        // Enquiry form submission
+        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'form-message';
+            form.appendChild(messageDiv);
+            
+            // Basic validation
+            const phone = formData.get('phone');
+            if (!/^[0-9]{10}$/.test(phone)) {
+                messageDiv.textContent = 'Please enter a valid 10-digit phone number';
+                messageDiv.className = 'form-message error';
+                return;
+            }
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            messageDiv.textContent = '';
+            
+            fetch('user/api/process_enquiry.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    messageDiv.textContent = data.message;
+                    messageDiv.className = 'form-message success';
+                    form.reset();
+                    setTimeout(() => {
+                        document.getElementById('enquiryModal').style.display = 'none';
+                    }, 2000);
+                } else {
+                    messageDiv.textContent = data.message;
+                    messageDiv.className = 'form-message error';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                messageDiv.textContent = 'An error occurred. Please try again.';
+                messageDiv.className = 'form-message error';
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Enquiry';
+            });
+        });
+    </script>
+
+    <style>
+        .form-message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</body>
+
+</html>
